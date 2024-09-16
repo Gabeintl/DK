@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <link href="https://fonts.cdnfonts.com/css/cute" rel="stylesheet">
+                <h1 class = "header_text">Ei doidinha</h1>
+                <h1 class = "header_text">Gostaria de assistir "É assim que acaba" comigo?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media.tenor.com/AH-6-4t7bJIAAAAM/maomao-kusuriya-no-hitorigoto.gif" alt="Cute animated illustration" style="width: 440px; height: 248px;">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Sim</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">Não</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>

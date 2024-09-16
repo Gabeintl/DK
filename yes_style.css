@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evita barra de rolagem */
+    position: relative;
+    background-color: rgb(189, 225, 122); /* Cor de fundo opcional */
+}
+
+.container {
+    text-align: center;
+}
+
+.header_text {
+    font-family: Nunito;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+    -webkit-text-stroke: 1px white;
+}
+
+.gif_container img {
+    width: 440px;
+    height: 440px;
+}
+
+#image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* Permite interagir com os elementos abaixo */
+}
+
+.image {
+    position: absolute;
+    width: 50px; /* Ajuste conforme necessário */
+    height: 50px; /* Ajuste conforme necessário */
+    background-image: url('https://art.pixilart.com/699fb46a495e3d1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -2; /* Garante que as imagens fiquem sobre outros conteúdos */
+    animation: beat 1s infinite; /* Aplica a animação */
+}
+
+@keyframes beat {
+    0%, 100% {
+        transform: scale(1); /* Tamanho original */
+    }
+    50% {
+        transform: scale(1.2); /* Tamanho aumentado */
+    }
+}
