@@ -3,7 +3,7 @@ body {
     padding: 0;
     overflow: hidden; /* Evita barra de rolagem */
     position: relative;
-    background-color: rgb(189, 225, 122); /* Cor de fundo opcional */
+    background-color: rgb(75, 147, 109); /* Cor de fundo opcional */
 }
 
 .container {
