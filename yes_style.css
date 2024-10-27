@@ -1,53 +1,55 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  background-color: rgb(75, 147, 109); /* Cor de fundo opcional */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: rgb(75, 147, 109); /* Cor de fundo opcional */
 }
 
 .container {
-  text-align: center;
+    text-align: center;
 }
 
 .header_text {
-  font-family: Nunito;
-  font-size: 40px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 0;
-  -webkit-text-stroke: 1px white;
+    font-family: Nunito;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+    -webkit-text-stroke: 1px white;
+}
+
+.gif_container img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #image-container {
-  position: relative; /* Make the container relative for absolute positioning */
-  width: 100%; /* Set a width to prevent overflow */
-  height: 100%; /* Set a height for the container */
-  pointer-events: none; /* Allow interaction with elements below */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* Permite interagir com os elementos abaixo */
 }
 
 .image {
-  position: absolute;
-  width: 50px; /* Adjust width as needed */
-  height: 50px; /* Adjust height as needed */
-  background-image: url('https://art.pixilart.com/699fb46a495e3d1.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  animation: fall infinite alternate ease-in-out 3s; /* Combined animation with duration */
+    position: absolute;
+    width: 50px; /* Ajuste conforme necessário */
+    height: 50px; /* Ajuste conforme necessário */
+    background-image: url('https://art.pixilart.com/699fb46a495e3d1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -2; /* Garante que as imagens fiquem sobre outros conteúdos */
+    animation: beat 1s infinite; /* Aplica a animação */
 }
 
-@keyframes fall {
-  0% {
-    top: -100px; /* Start hearts off-screen at the top */
-    opacity: 0; /* Hearts are initially invisible */
-  }
-  20% { /* Delay initial appearance for a smoother effect */
-    opacity: 1; /* Hearts become fully visible */
-  }
-  100% {
-    top: calc(100vh + 100px); /* Fall beyond the container's bottom */
-    opacity: 0; /* Hearts become invisible again */
-  }
+@keyframes beat {
+    0%, 100% {
+        transform: scale(1); /* Tamanho original */
+    }
+    50% {
+        transform: scale(1.2); /* Tamanho aumentado */
+    }
 }
